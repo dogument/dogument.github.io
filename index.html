@@ -4,7 +4,7 @@
 		<meta charset="utf-8" />
 		<title>Dogument / 狗狗文档</title>
 		<link href="jquery-ui.css" rel="stylesheet" />
-		<link rel="icon" href="/favicon.png" type="image/x-icon"/>
+		<link rel="icon" href="/favicon.png" type="image/x-icon" />
 		<style>
 			body {
 				font-family: "Determination Mono";
@@ -73,10 +73,12 @@
 	<body>
 		<div id="index" class="page">
 			<h1 style="text-align: center">
-				<img src="./favicon.png" style="display: inline;height:40px;"><big>狗狗文档</big> <small><em>Dogument</em></small>
+				<img src="./favicon.png" style="display: inline; height: 40px" /><big
+					>狗狗文档</big
+				>
+				<small><em>Dogument</em></small>
 			</h1>
 			<div class="ui-widget">
-				
 				<p>
 					欢迎！这里是狗狗文档，一个关于Toby Fox的作品、以及关于Toby
 					Fox的人的作品的文档。
@@ -91,12 +93,94 @@
 								class="ui-icon ui-icon-info"
 								style="float: left; margin-right: 0.3em"
 							></span>
-							<strong>嗨！</strong>此网站正在构建中，所以功能有一定欠缺。
-							查看<a href="?page=test">测试页面</a>。
+							<strong>嗨！</strong>此网站正在构建中，所以功能有一定欠缺。 查看<a
+								href="?page=test"
+								>测试页面</a
+							>。
 						</p>
 					</div>
 				</div>
-				
+				<br />
+				<a href="?page=Kris">KrisGetTheBanana</a>
+			</div>
+		</div>
+		<div id="template" class="page">
+			<div class="ui-widget">
+				<h1>标题</h1>
+				<hr>
+				<div class="ui-widget">
+					<div
+						class="ui-state-highlight ui-corner-all"
+						style="margin-top: 20px; padding: 0 0.7em"
+					>
+						<p>
+							<span
+								class="ui-icon ui-icon-info"
+								style="float: left; margin-right: 0.3em"
+							></span>
+							<strong>嗨！</strong>此页面正在编辑中，<del
+								>图片仅供参考，请以实物为准。</del
+							>
+						</p>
+					</div>
+					<br>
+					<div class="ui-widget">
+						<div class="ui-state-error ui-corner-all" style="padding: 0 0.7em">
+							<p>
+								<span
+									class="ui-icon ui-icon-alert"
+									style="float: left; margin-right: 0.3em"
+								></span>
+								<strong>警告！</strong>额，香蕉出现！快去捡！！
+							</p>
+						</div>
+					</div>
+				</div>
+				<h1></h1>
+				<hr>
+				<h2>简述</h2>
+				<p>
+					XXXXX<a href="?page=template">XXX</a
+					>XXXXX<a href="?page=template">XXX</a
+					>XXX。
+				</p>
+				<h2>详细介绍</h2>
+				<h3>XX</h3>
+				<cite>&nbsp;&nbsp;&nbsp;&nbsp;详见：<a href="template">XXXX</a></cite>
+				<p>XXX</p>
+			</div>
+		</div>
+		<div id="Kris" class="page">
+			<div class="ui-widget">
+				<h1>Kris</h1>
+				<hr>
+				<div class="ui-widget">
+					<div
+						class="ui-state-highlight ui-corner-all"
+						style="margin-top: 20px; padding: 0 0.7em"
+					>
+						<p>
+							<span
+								class="ui-icon ui-icon-info"
+								style="float: left; margin-right: 0.3em"
+							></span>
+							<strong>嗨！</strong>此页面正在编辑中，<del
+								>图片仅供参考，请以实物为准。</del
+							>
+						</p>
+					</div>
+				</div>
+				<h1></h1>
+				<hr>
+				<h2>简述</h2>
+				<p>
+					Kris（克里斯）是<a href="?page=Deltarune">Deltarune</a
+					>第一、二章中玩家控制的角色，<a href="?page=可游玩角色">主角团</a
+					>之一。
+				</p>
+				<h2>详细介绍</h2>
+				<h3>头衔</h3>
+				<cite>&nbsp;&nbsp;&nbsp;&nbsp;详见：<a href="头衔">头衔</a></cite>
 			</div>
 		</div>
 		<div id="test" class="page">
@@ -1136,6 +1220,11 @@
 			if (location.search.indexOf("?page=") == 0) {
 				$(".page").css("display", "none");
 				$("#" + location.search.slice(6)).css("display", "block");
+				document.title = location.search.slice(6) + " - 狗狗文档（Dogument）";
+			} else {
+				$(".page").css("display", "none");
+				$("#index").css("display", "block");
+				document.title = "狗狗文档（Dogument）";
 			}
 
 			$("#accordion").accordion();
