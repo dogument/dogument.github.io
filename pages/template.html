@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="cn">
+<!--template version v0.7.1-->
+
+<head>
+	<meta charset="utf-8" />
+	<title>Template - Dogument / 狗狗文档</title>
+	<link href="../jquery-ui.css" rel="stylesheet" />
+	<link rel="icon" href="../favicon.png" type="image/x-icon" />
+	<style>
+		@font-face {
+			font-family: "Determination Mono";
+			src: url("../dtmmono.ttf");
+		}
+
+		html{
+			background-image: url(./images/cyber_bg.gif);
+			background-size: 100%;
+			background-attachment: fixed;
+			image-rendering: pixelated;
+		}
+
+		body {
+			font-family: 'Determination Mono';
+			margin: 40px;
+			margin-top: 0px;
+			margin-bottom: 100px;
+			background-color: #000000aa;
+			color: #fff;
+		}
+
+		.demoHeaders {
+			margin-top: 2em;
+		}
+
+		#dialog-link {
+			padding: 0.4em 1em 0.4em 20px;
+			text-decoration: none;
+			position: relative;
+		}
+
+		#dialog-link span.ui-icon {
+			margin: 0 5px 0 0;
+			position: absolute;
+			left: 0.2em;
+			top: 50%;
+			margin-top: -8px;
+		}
+
+		#icons {
+			margin: 0;
+			padding: 0;
+		}
+
+		#icons li {
+			margin: 2px;
+			position: relative;
+			padding: 4px 0;
+			cursor: pointer;
+			float: left;
+			list-style: none;
+		}
+
+		#icons span.ui-icon {
+			float: left;
+			margin: 0 4px;
+		}
+
+		.fakewindowcontain .ui-widget-overlay {
+			position: absolute;
+		}
+
+		select {
+			width: 200px;
+		}
+
+		a:link {
+			color: #f00;
+		}
+
+		a:visited {
+			color: #f0f;
+		}
+
+		a:hover {
+			color: #ff0;
+		}
+
+		a:active {
+			color: #f80;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		.info_bar {
+			width: 300px;
+			position: relative;
+			right: 40px;
+			float: right;
+			display: inline;
+			margin-left: 40px;
+		}
+	</style>
+</head>
+
+<body>
+	<a href="../index.html" style="color: white;position: sticky;top:0px;width: 100%;z-index: 9999;margin: 0;">
+		<h3 style="background-color: #000000dd;height: 80px;font-family: 'Determination Mono';">
+			<div style="padding-top:25px">
+				&nbsp;
+				<img src="../favicon.png" style="display: inline; height: 25px" /><big>狗狗文档</big>
+				<small><em>Dogument </em><small><small style="color: #777;">狗狗文档——一个收集关于Toby Fox及其作品、相关人物及其作品及其相关内容的网站</small></small></small>
+			</div>
+		</h3>
+	</a>
+	<div class="ui-widget" style="margin:50px">
+		<h1>标题</h1>
+		<hr />
+		<div class="ui-widget">
+			<div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 0 0.7em">
+				<p>
+					<span class="ui-icon ui-icon-info" style="float: left; margin-right: 0.3em"></span>
+					<strong>嗨！</strong>此页面正在编辑中，<del>图片仅供参考，请以实物为准。</del>
+				</p>
+			</div>
+			<br />
+			<div class="ui-widget">
+				<div class="ui-state-error ui-corner-all" style="padding: 0 0.7em">
+					<p>
+						<span class="ui-icon ui-icon-alert" style="float: left; margin-right: 0.3em"></span>
+						<strong>警告！</strong>额，香蕉出现！快去捡！！
+					</p>
+				</div>
+			</div>
+		</div>
+		<h1></h1>
+		<hr />
+		<fieldset class="info_bar">
+			<legend>基本信息</legend>
+			<table>
+				<div id="tabs">
+					<ul>
+						<li><a href="#dog-tabs-1">普通</a></li>
+						<li><a href="#dog-tabs-2">狗</a></li>
+						<li><a href="#dog-tabs-3">狗狗狗</a></li>
+					</ul>
+					<div id="dog-tabs-1">
+						<img src="../favicon.png" style="height: 50px;">
+					</div>
+					<div id="dog-tabs-2">
+						<img src="../favicon.png" style="height: 50px;rotate: 90deg;">
+					</div>
+					<div id="dog-tabs-3">
+						<img src="../favicon.png" style="height: 50px;rotate: 200deg;">
+					</div>
+				</div>
+				<p style="text-align: center;"><small>烦人的狗</small></p>
+				<tr>
+					<td>中文名</td>
+					<td>神烦狗</td>
+				</tr>
+				<tr>
+					<td>中文别名</td>
+					<td>烦人的狗</td>
+				</tr>
+				<tr>
+					<td>英文名</td>
+					<td>Annoying Dog</td>
+				</tr>
+				<tr>
+					<td>AT</td>
+					<td>Dog</td>
+				</tr>
+				<tr>
+					<td>DF</td>
+					<td>Dog</td>
+				</tr>
+				<tr>
+					<td>HP</td>
+					<td>Dog</td>
+				</tr>
+				<tr>
+					<td>名言</td>
+					<td>Have you played undertale?<br>Woof!<br>Hi! I'm Toby Fox!<br>I'm a dog! Yeah!</td>
+				</tr>
+			</table>
+		</fieldset>
+		<h2>简述</h2>
+		<p style="display: inside;">
+			某某某某某<a href="?page=template">某某某</a>某某某某某<a
+				href="?page=template">某某某</a>某某某某某某某某某某某某某某某,<wbr>某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某,<wbr>某某某某某某某某某某某某。
+		</p>
+		<h2>详细介绍</h2>
+		<h3>某某</h3>
+		<cite>&nbsp;&nbsp;&nbsp;&nbsp;详见：<a href="?page=template">某某某某</a></cite>
+		<p>某某某某某某某某某某某某某某某某某某某某某某,某某某某某某某某某某某某某某某.</p>
+		<p>某某某某某某某某某某某某某某某某某某某某某某,某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某,某某某某某某某某某!某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某.某某某某某某某某某某某,某某某某某某.</p>
+		<p>某某某某某某.某某某某某某某某某某某某某某某某某某某某某某某某某某某某,某某某某某某某某某某某某某某某.</p>
+		<p>某某某某某某某某某某某某某某某某某某某某某某某某某某某某!某某某某某某,某某某某某?某某某某某某某某某某.</p>
+		<p>某某某某某某某某某某某某某.某某某某某某某某某,某某某某某某某某某某某某某:某某某某某某某某某某某某某某.</p>
+		<h4>某某</h4>
+		<p>某某某某某某某某某某某某某某某某某某某某某某某——某某某某某某某某某某某,某某某某某某某某某某某某某某某.</p>
+		<small><i>参考资料：<a href="#">sth should be here but nobody came</a></i></small>
+		
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		
+	</div>
+	
+	<script src="../external/jquery/jquery.js"></script>
+	<script src="../jquery-ui.js"></script>
+	<script>
+		$("#accordion").accordion();
+
+		var availableTags = [
+			"Undertale",
+			"Deltarune",
+			"Frisk",
+			"Kris",
+			"Ralsei",
+			"Susie",
+			"Toriel",
+			"Asgore Dreemurr",
+			"Sans",
+			"Papyrus",
+			"Froggit",
+			"Undyne",
+			"Alphys",
+			"Mettaton",
+			"Asriel Dreemurr",
+			"Lancer",
+			"King",
+			"Queen",
+			"Jevil",
+			"Spamton",
+			"Spamton NEO",
+			"BIG SHOT",
+			"Waterfall",
+			"ZXC",
+		];
+		$("#autocomplete").autocomplete({
+			source: availableTags,
+		});
+
+		$("#button").button();
+		$("#button-icon").button({
+			icon: "ui-icon-gear",
+			showLabel: false,
+		});
+
+		$("#radioset").buttonset();
+
+		$("#controlgroup").controlgroup();
+
+		$("#tabs").tabs();
+
+		$("#dialog").dialog({
+			autoOpen: false,
+			width: 400,
+			buttons: [
+				{
+					text: "Ok",
+					click: function () {
+						$(this).dialog("close");
+					},
+				},
+				{
+					text: "Cancel",
+					click: function () {
+						$(this).dialog("close");
+					},
+				},
+			],
+		});
+
+		// Link to open the dialog
+		$("#dialog-link").click(function (event) {
+			$("#dialog").dialog("open");
+			event.preventDefault();
+		});
+
+		$("#datepicker").datepicker({
+			inline: true,
+		});
+
+		$("#slider").slider({
+			range: true,
+			values: [17, 67],
+		});
+
+		$("#progressbar").progressbar({
+			value: 20,
+		});
+
+		$("#spinner").spinner();
+
+		$("#menu").menu();
+
+		$("#tooltip").tooltip();
+
+		$("#selectmenu").selectmenu();
+
+		// Hover states on the static widgets
+		$("#dialog-link, #icons li").hover(
+			function () {
+				$(this).addClass("ui-state-hover");
+			},
+			function () {
+				$(this).removeClass("ui-state-hover");
+			}
+		);
+	</script>
+</body>
+
+</html>

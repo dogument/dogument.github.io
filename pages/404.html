@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="cn">
+<!--template version v0.7.1-->
+
+<head>
+	<meta charset="utf-8" />
+	<title>404 - Dogument / 狗狗文档</title>
+	<link href="../jquery-ui.css" rel="stylesheet" />
+	<link rel="icon" href="../favicon.png" type="image/x-icon" />
+	<style>
+		@font-face {
+			font-family: "Determination Mono";
+			src: url("../dtmmono.ttf");
+		}
+
+		html{
+			background-image: url(./images/cyber_bg.gif);
+			background-size: 100%;
+			background-attachment: fixed;
+			image-rendering: pixelated;
+		}
+
+		body {
+			font-family: 'Determination Mono';
+			margin: 40px;
+			margin-top: 0px;
+			margin-bottom: 100px;
+			background-color: #000000aa;
+			color: #fff;
+		}
+
+		.demoHeaders {
+			margin-top: 2em;
+		}
+
+		#dialog-link {
+			padding: 0.4em 1em 0.4em 20px;
+			text-decoration: none;
+			position: relative;
+		}
+
+		#dialog-link span.ui-icon {
+			margin: 0 5px 0 0;
+			position: absolute;
+			left: 0.2em;
+			top: 50%;
+			margin-top: -8px;
+		}
+
+		#icons {
+			margin: 0;
+			padding: 0;
+		}
+
+		#icons li {
+			margin: 2px;
+			position: relative;
+			padding: 4px 0;
+			cursor: pointer;
+			float: left;
+			list-style: none;
+		}
+
+		#icons span.ui-icon {
+			float: left;
+			margin: 0 4px;
+		}
+
+		.fakewindowcontain .ui-widget-overlay {
+			position: absolute;
+		}
+
+		select {
+			width: 200px;
+		}
+
+		a:link {
+			color: #f00;
+		}
+
+		a:visited {
+			color: #f0f;
+		}
+
+		a:hover {
+			color: #ff0;
+		}
+
+		a:active {
+			color: #f80;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		.info_bar {
+			width: 300px;
+			position: relative;
+			right: 40px;
+			float: right;
+			display: inline;
+			margin-left: 40px;
+		}
+	</style>
+</head>
+
+<body>
+	<a href="../index.html" style="color: white;position: sticky;top:0px;width: 100%;z-index: 9999;margin: 0;">
+		<h3 style="background-color: #000000dd;height: 80px;font-family: 'Determination Mono';">
+			<div style="padding-top:25px">
+				&nbsp;
+				<img src="../favicon.png" style="display: inline; height: 25px" /><big>狗狗文档</big>
+				<small><em>Dogument </em><small><small style="color: #777;">狗狗文档——一个收集关于Toby Fox及其作品、相关人物及其作品及其相关内容的网站</small></small></small>
+			</div>
+		</h3>
+	</a>
+	<div class="ui-widget" style="margin:50px">
+		<h1>404 - 看来你进入了蛋树男的神秘领域.</h1>
+		<hr />
+		<p>由于某些原因，服务器无法找到你输入的网址。</p>
+        <p>请检查网址的正确性，或者检查跳转链接的时效性——Dogument的链接格式可能已经不兼容原来的链接。</p>
+        <p>如果你是从Dogument本站跳转到这里的，请在<a href="https://github.com/dogument/dogument.github.io/">Dogument的Github页面</a>提交Issue。</p>
+        <p>又或者，你只是想看看会发生什么呢...?</p>
+        <br>
+        <p><a href="../../">点击这里</a>返回主页。</p>
+        <br><br>
+		
+	</div>
+	
+	<script src="../external/jquery/jquery.js"></script>
+	<script src="../jquery-ui.js"></script>
+	<script>
+		$("#accordion").accordion();
+
+		var availableTags = [
+			"Undertale",
+			"Deltarune",
+			"Frisk",
+			"Kris",
+			"Ralsei",
+			"Susie",
+			"Toriel",
+			"Asgore Dreemurr",
+			"Sans",
+			"Papyrus",
+			"Froggit",
+			"Undyne",
+			"Alphys",
+			"Mettaton",
+			"Asriel Dreemurr",
+			"Lancer",
+			"King",
+			"Queen",
+			"Jevil",
+			"Spamton",
+			"Spamton NEO",
+			"BIG SHOT",
+			"Waterfall",
+			"ZXC",
+		];
+		$("#autocomplete").autocomplete({
+			source: availableTags,
+		});
+
+		$("#button").button();
+		$("#button-icon").button({
+			icon: "ui-icon-gear",
+			showLabel: false,
+		});
+
+		$("#radioset").buttonset();
+
+		$("#controlgroup").controlgroup();
+
+		$("#tabs").tabs();
+
+		$("#dialog").dialog({
+			autoOpen: false,
+			width: 400,
+			buttons: [
+				{
+					text: "Ok",
+					click: function () {
+						$(this).dialog("close");
+					},
+				},
+				{
+					text: "Cancel",
+					click: function () {
+						$(this).dialog("close");
+					},
+				},
+			],
+		});
+
+		// Link to open the dialog
+		$("#dialog-link").click(function (event) {
+			$("#dialog").dialog("open");
+			event.preventDefault();
+		});
+
+		$("#datepicker").datepicker({
+			inline: true,
+		});
+
+		$("#slider").slider({
+			range: true,
+			values: [17, 67],
+		});
+
+		$("#progressbar").progressbar({
+			value: 20,
+		});
+
+		$("#spinner").spinner();
+
+		$("#menu").menu();
+
+		$("#tooltip").tooltip();
+
+		$("#selectmenu").selectmenu();
+
+		// Hover states on the static widgets
+		$("#dialog-link, #icons li").hover(
+			function () {
+				$(this).addClass("ui-state-hover");
+			},
+			function () {
+				$(this).removeClass("ui-state-hover");
+			}
+		);
+	</script>
+</body>
+
+</html>
